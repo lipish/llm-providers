@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "updated_at": "2026-06-03T12:00:00.000000Z",
+  "updated_at": "2026-06-17T12:00:00.000000Z",
   "providers": {
     "google": {
       "label": "Google Gemini",
@@ -1713,6 +1713,16 @@
       "endpoint_models": {
         "cn": [
           {
+            "id": "glm-5.2",
+            "name": "GLM-5.2",
+            "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
+            "supports_tools": true,
+            "context_length": 1000000,
+            "input_price": 6.0,
+            "output_price": 24.0,
+            "published_at": "2026-06-17"
+          },
+          {
             "id": "glm-5.1",
             "name": "GLM-5.1",
             "description": "Latest flagship with stronger coding and long-horizon autonomous execution",
@@ -1905,6 +1915,16 @@
         ],
         "global": [
           {
+            "id": "glm-5.2",
+            "name": "GLM-5.2",
+            "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
+            "supports_tools": true,
+            "context_length": 1000000,
+            "input_price": 1.4,
+            "output_price": 4.4,
+            "published_at": "2026-06-17"
+          },
+          {
             "id": "glm-5.1",
             "name": "GLM-5.1",
             "description": "Latest flagship with stronger coding and long-horizon autonomous execution",
@@ -2088,6 +2108,16 @@
         ]
       },
       "models": [
+        {
+          "id": "glm-5.2",
+          "name": "GLM-5.2",
+          "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 6.0,
+          "output_price": 24.0,
+          "published_at": "2026-06-17"
+        },
         {
           "id": "glm-5.1",
           "name": "GLM-5.1",
