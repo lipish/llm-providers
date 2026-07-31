@@ -239,7 +239,7 @@ Only when explicitly requested:
 ## Quick API Reference
 
 ```rust
-use llm_providers::{
+use eero_llm_providers::{
     canonical_model_id, export_pararouter_registry, get_endpoint, get_model_for_endpoint,
     list_catalog_models, list_offerings,
 };
@@ -265,7 +265,7 @@ Export schema: `schemas/pararouter-export-v1.json`.
 
 ## Cursor Cloud specific instructions
 
-- This is a pure Rust library + CLI (`llm_providers`); there are no long-running services, databases, or GUI. Validate work entirely from the terminal.
+- This is a pure Rust library + CLI (`eero_llm_providers`); there are no long-running services, databases, or GUI. Validate work entirely from the terminal.
 - The crate uses `edition = "2024"`, which requires Rust >= 1.85. The base image ships an older `rustc`, so the update script pins the `stable` toolchain (currently 1.97+). If a build fails with an edition/feature error, run `rustup default stable`.
 - Standard commands are already documented above and in `README.md` / `CONTRIBUTING.md`: `cargo test`, `cargo fmt --all -- --check`, `cargo clippy -- -D warnings`, `cargo check --examples`, and `cargo run -- export --format pararouter [--output FILE]`.
 - `build.rs` embeds and validates `data/providers.json` at compile time, so any JSON error surfaces as a build panic during `cargo build`/`cargo test` rather than at runtime.

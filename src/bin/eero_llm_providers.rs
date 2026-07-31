@@ -1,4 +1,4 @@
-use llm_providers::export_pararouter_registry;
+use eero_llm_providers::export_pararouter_registry;
 use std::env;
 use std::io::{self, Write};
 use std::process;
@@ -6,13 +6,13 @@ use std::process;
 fn main() {
     let mut args = env::args().skip(1);
     let Some(command) = args.next() else {
-        eprintln!("usage: llm_providers export --format pararouter [--output FILE]");
+        eprintln!("usage: eero_llm_providers export --format pararouter [--output FILE]");
         process::exit(1);
     };
 
     if command != "export" {
         eprintln!("unknown command: {command}");
-        eprintln!("usage: llm_providers export --format pararouter [--output FILE]");
+        eprintln!("usage: eero_llm_providers export --format pararouter [--output FILE]");
         process::exit(1);
     }
 

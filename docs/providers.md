@@ -32,7 +32,7 @@ Use the Endpoint ID to directly access a specific API entry point:
 ### Rust
 
 ```rust
-use llm_providers::get_endpoint;
+use eero_llm_providers::get_endpoint;
 
 if let Some((family_id, ep)) = get_endpoint("moonshot:global") {
     println!("Family: {}, Base URL: {}", family_id, ep.base_url);

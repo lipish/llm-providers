@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/lipish/llm-providers/schemas/pararouter-export-v1.json",
+  "$id": "https://github.com/EeroEternal/llm-providers/schemas/pararouter-export-v1.json",
   "title": "ParaRouter LLM Providers Export v1",
   "type": "object",
   "required": ["registry_version", "registry_updated_at", "catalog", "offerings"],
