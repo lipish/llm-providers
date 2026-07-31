@@ -1,5 +1,5 @@
-use llm_connector::{ChatRequest, LlmClient, Message, Role};
 use eero_llm_providers::get_providers_data;
+use llm_connector::{ChatRequest, LlmClient, Message, Role};
 use std::env;
 
 #[tokio::main]
