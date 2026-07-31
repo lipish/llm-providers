@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "updated_at": "2026-06-17T12:00:00.000000Z",
+  "updated_at": "2026-07-31T03:13:00.000000Z",
   "providers": {
     "google": {
       "label": "Google Gemini",
@@ -15,14 +15,43 @@
       },
       "models": [
         {
+          "id": "gemini-3.6-flash",
+          "name": "Gemini 3.6 Flash",
+          "description": "Stable multimodal Flash model with reasoning, tools, and search grounding",
+          "supports_tools": true,
+          "context_length": 1048576,
+          "input_price": 1.5,
+          "output_price": 7.5,
+          "published_at": "2026-07-21",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.15
+        },
+        {
+          "id": "gemini-3.5-flash-lite",
+          "name": "Gemini 3.5 Flash-Lite",
+          "description": "Cost-efficient multimodal model for high-volume agentic workloads",
+          "supports_tools": true,
+          "context_length": 1048576,
+          "input_price": 0.3,
+          "output_price": 2.5,
+          "published_at": "2026-07-21",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.03
+        },
+        {
           "id": "gemini-3.5-flash",
           "name": "Gemini 3.5 Flash",
           "description": "Latest stable Flash model with frontier intelligence and search grounding",
           "supports_tools": true,
-          "context_length": 1000000,
+          "context_length": 1048576,
           "input_price": 1.5,
           "output_price": 9.0,
-          "published_at": "2026-05-01"
+          "published_at": "2026-05-19",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.15
         },
         {
           "id": "gemini-3.1-pro-preview",
@@ -112,7 +141,9 @@
           "context_length": 1000000,
           "input_price": 0.1,
           "output_price": 0.4,
-          "published_at": "2024-12-11"
+          "published_at": "2024-12-11",
+          "deprecated_at": "2026-06-01",
+          "replacement_id": "gemini-3.6-flash"
         },
         {
           "id": "gemini-1.5-pro",
@@ -157,6 +188,48 @@
         }
       },
       "models": [
+        {
+          "id": "gpt-5.6-sol",
+          "name": "GPT-5.6 Sol",
+          "description": "Flagship long-context reasoning and agentic model",
+          "supports_tools": true,
+          "context_length": 1050000,
+          "input_price": 5,
+          "output_price": 30,
+          "published_at": "2026-07-09",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.5,
+          "cache_write_price": 6.25
+        },
+        {
+          "id": "gpt-5.6-terra",
+          "name": "GPT-5.6 Terra",
+          "description": "Balanced long-context reasoning and agentic model",
+          "supports_tools": true,
+          "context_length": 1050000,
+          "input_price": 2,
+          "output_price": 12,
+          "published_at": "2026-07-09",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.2,
+          "cache_write_price": 2.5
+        },
+        {
+          "id": "gpt-5.6-luna",
+          "name": "GPT-5.6 Luna",
+          "description": "Efficient long-context reasoning model",
+          "supports_tools": true,
+          "context_length": 1050000,
+          "input_price": 0.2,
+          "output_price": 1.2,
+          "published_at": "2026-07-09",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.02,
+          "cache_write_price": 0.25
+        },
         {
           "id": "gpt-5.5",
           "name": "GPT-5.5",
@@ -222,20 +295,25 @@
           "name": "GPT-5.2",
           "description": "Best general-purpose, complex reasoning, tool calling, vision",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 2.5,
-          "output_price": 10.0,
-          "published_at": "2024-11-01"
+          "context_length": 400000,
+          "input_price": 1.75,
+          "output_price": 14,
+          "published_at": "2025-12-11",
+          "cache_read_price": 0.175,
+          "supports_vision": true,
+          "supports_reasoning": true
         },
         {
           "id": "gpt-5.2-pro",
           "name": "GPT-5.2 Pro",
           "description": "Harder thinking for tough problems",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 5.0,
-          "output_price": 20.0,
-          "published_at": "2024-12-01"
+          "context_length": 400000,
+          "input_price": 21,
+          "output_price": 168,
+          "published_at": "2025-12-11",
+          "supports_vision": true,
+          "supports_reasoning": true
         },
         {
           "id": "gpt-5.2-codex",
@@ -245,27 +323,35 @@
           "context_length": 128000,
           "input_price": 2.5,
           "output_price": 10.0,
-          "published_at": "2024-11-15"
+          "published_at": "2025-12-11",
+          "deprecated_at": "2026-07-23",
+          "replacement_id": "gpt-5.6-sol"
         },
         {
           "id": "gpt-5-mini",
           "name": "GPT-5 Mini",
           "description": "Cost-optimized reasoning and chat",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 0.4,
-          "output_price": 1.6,
-          "published_at": "2024-10-01"
+          "context_length": 400000,
+          "input_price": 0.25,
+          "output_price": 2,
+          "published_at": "2025-08-07",
+          "cache_read_price": 0.025,
+          "supports_vision": true,
+          "supports_reasoning": true
         },
         {
           "id": "gpt-5-nano",
           "name": "GPT-5 Nano",
           "description": "High-throughput, simple tasks",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 0.1,
+          "context_length": 400000,
+          "input_price": 0.05,
           "output_price": 0.4,
-          "published_at": "2024-10-01"
+          "published_at": "2025-08-07",
+          "cache_read_price": 0.005,
+          "supports_vision": true,
+          "supports_reasoning": true
         },
         {
           "id": "gpt-4o",
@@ -292,10 +378,12 @@
           "name": "GPT-4.1",
           "description": "Advanced reasoning",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 2.5,
-          "output_price": 10.0,
-          "published_at": "2024-08-01"
+          "context_length": 1047576,
+          "input_price": 2,
+          "output_price": 8,
+          "published_at": "2025-04-14",
+          "cache_read_price": 0.5,
+          "supports_vision": true
         },
         {
           "id": "o1",
@@ -341,6 +429,48 @@
       },
       "models": [
         {
+          "id": "claude-opus-5",
+          "name": "Claude Opus 5",
+          "description": "Most capable Claude model for long-running agents and complex reasoning",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 5,
+          "output_price": 25,
+          "published_at": "2026-07-24",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.5,
+          "cache_write_price": 6.25
+        },
+        {
+          "id": "claude-sonnet-5",
+          "name": "Claude Sonnet 5",
+          "description": "Balanced frontier model for coding and agents",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 3,
+          "output_price": 15,
+          "published_at": "2026-06-30",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.3,
+          "cache_write_price": 3.75
+        },
+        {
+          "id": "claude-fable-5",
+          "name": "Claude Fable 5",
+          "description": "Frontier creative and reasoning model",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 10,
+          "output_price": 50,
+          "published_at": "2026-06-09",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 1,
+          "cache_write_price": 12.5
+        },
+        {
           "id": "claude-opus-4-8",
           "name": "Claude Opus 4.8",
           "description": "Latest flagship model for coding, agentic tasks, and professional work with 1M context",
@@ -358,7 +488,7 @@
           "context_length": 1000000,
           "input_price": 5.0,
           "output_price": 25.0,
-          "published_at": "2026-02-01"
+          "published_at": "2026-04-16"
         },
         {
           "id": "claude-opus-4-6",
@@ -368,7 +498,7 @@
           "context_length": 1000000,
           "input_price": 5.0,
           "output_price": 25.0,
-          "published_at": "2025-10-01"
+          "published_at": "2026-02-05"
         },
         {
           "id": "claude-sonnet-4-6",
@@ -380,7 +510,7 @@
           "output_price": 15.0,
           "cache_read_price": 0.3,
           "cache_write_price": 3.75,
-          "published_at": "2026-02-01"
+          "published_at": "2026-02-17"
         },
         {
           "id": "claude-haiku-4-5-20251001",
@@ -439,7 +569,10 @@
             "context_length": 1000000,
             "input_price": 1.0,
             "output_price": 2.0,
-            "published_at": "2026-04-24"
+            "published_at": "2026-04-24",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.02
           },
           {
             "id": "deepseek-v4-pro",
@@ -449,7 +582,10 @@
             "context_length": 1000000,
             "input_price": 3.0,
             "output_price": 6.0,
-            "published_at": "2026-04-24"
+            "published_at": "2026-04-24",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.025
           },
           {
             "id": "deepseek-chat",
@@ -485,7 +621,10 @@
             "context_length": 1000000,
             "input_price": 0.14,
             "output_price": 0.28,
-            "published_at": "2026-04-24"
+            "published_at": "2026-04-24",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.0028
           },
           {
             "id": "deepseek-v4-pro",
@@ -495,7 +634,10 @@
             "context_length": 1000000,
             "input_price": 0.435,
             "output_price": 0.87,
-            "published_at": "2026-04-24"
+            "published_at": "2026-04-24",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.003625
           },
           {
             "id": "deepseek-chat",
@@ -532,7 +674,10 @@
           "context_length": 1000000,
           "input_price": 1.0,
           "output_price": 2.0,
-          "published_at": "2026-04-24"
+          "published_at": "2026-04-24",
+          "supports_reasoning": true,
+          "supports_vision": false,
+          "cache_read_price": 0.02
         },
         {
           "id": "deepseek-v4-pro",
@@ -542,7 +687,10 @@
           "context_length": 1000000,
           "input_price": 3.0,
           "output_price": 6.0,
-          "published_at": "2026-04-24"
+          "published_at": "2026-04-24",
+          "supports_reasoning": true,
+          "supports_vision": false,
+          "cache_read_price": 0.025
         },
         {
           "id": "deepseek-chat",
@@ -583,6 +731,54 @@
       },
       "models": [
         {
+          "id": "qwen3.7-max",
+          "name": "Qwen3.7 Max",
+          "description": "Flagship model for coding and long-horizon agents",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 12,
+          "output_price": 36,
+          "published_at": "2026-06-01",
+          "supports_vision": false,
+          "supports_reasoning": true
+        },
+        {
+          "id": "qwen3.7-plus",
+          "name": "Qwen3.7 Plus",
+          "description": "Native multimodal agent model with hybrid reasoning",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 2,
+          "output_price": 8,
+          "published_at": "2026-06-01",
+          "supports_vision": true,
+          "supports_reasoning": true
+        },
+        {
+          "id": "qwen3.7-flash",
+          "name": "Qwen3.7 Flash",
+          "description": "Cost-efficient native multimodal agent model",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 0.2,
+          "output_price": 0.8,
+          "published_at": "2026-07-21",
+          "supports_vision": true,
+          "supports_reasoning": true
+        },
+        {
+          "id": "qwen3.7-text-embedding",
+          "name": "Qwen3.7 Text Embedding",
+          "description": "Text and code embedding model",
+          "supports_tools": false,
+          "context_length": 131072,
+          "input_price": 0.5,
+          "output_price": 0,
+          "published_at": "2026-07-15",
+          "supports_vision": false,
+          "supports_reasoning": false
+        },
+        {
           "id": "qwen3.6-max-preview",
           "name": "Qwen3.6 Max Preview",
           "description": "Preview flagship for complex tasks with the strongest capability",
@@ -590,7 +786,7 @@
           "context_length": 262144,
           "input_price": 9.0,
           "output_price": 54.0,
-          "published_at": "2025-04-01"
+          "published_at": "2026-04-20"
         },
         {
           "id": "qwen3.6-plus",
@@ -739,7 +935,9 @@
             "context_length": 256000,
             "input_price": 6.5,
             "output_price": 27.0,
-            "published_at": "2026-04-21"
+            "published_at": "2026-04-21",
+            "supports_vision": true,
+            "supports_reasoning": true
           },
           {
             "id": "kimi-k2.5",
@@ -748,7 +946,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 4.0,
-            "output_price": 21.0
+            "output_price": 21.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-0905-preview",
@@ -757,7 +957,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 4.0,
-            "output_price": 16.0
+            "output_price": 16.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-turbo-preview",
@@ -766,7 +968,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 8.0,
-            "output_price": 58.0
+            "output_price": 58.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-0711-preview",
@@ -775,7 +979,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 4.0,
-            "output_price": 16.0
+            "output_price": 16.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-thinking",
@@ -784,7 +990,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 4.0,
-            "output_price": 16.0
+            "output_price": 16.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-thinking-turbo",
@@ -793,7 +1001,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 8.0,
-            "output_price": 58.0
+            "output_price": 58.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-latest",
@@ -802,7 +1012,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 2.0,
-            "output_price": 10.0
+            "output_price": 10.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-8k",
@@ -811,7 +1023,9 @@
             "supports_tools": true,
             "context_length": 8192,
             "input_price": 2.0,
-            "output_price": 10.0
+            "output_price": 10.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-8k-vision-preview",
@@ -820,7 +1034,9 @@
             "supports_tools": true,
             "context_length": 8192,
             "input_price": 2.0,
-            "output_price": 10.0
+            "output_price": 10.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-32k",
@@ -829,7 +1045,9 @@
             "supports_tools": true,
             "context_length": 32768,
             "input_price": 5.0,
-            "output_price": 20.0
+            "output_price": 20.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-32k-vision-preview",
@@ -838,7 +1056,9 @@
             "supports_tools": true,
             "context_length": 32768,
             "input_price": 5.0,
-            "output_price": 20.0
+            "output_price": 20.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-128k",
@@ -847,7 +1067,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 10.0,
-            "output_price": 30.0
+            "output_price": 30.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-128k-vision-preview",
@@ -856,10 +1078,51 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 10.0,
-            "output_price": 30.0
+            "output_price": 30.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           }
         ],
         "global": [
+          {
+            "id": "kimi-k2.7-code-highspeed",
+            "name": "Kimi K2.7 Code Highspeed",
+            "description": "High-throughput Kimi K2.7 Code endpoint",
+            "supports_tools": true,
+            "context_length": 262144,
+            "input_price": 1.9,
+            "output_price": 8,
+            "published_at": "2026-06-18",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.38
+          },
+          {
+            "id": "kimi-k2.7-code",
+            "name": "Kimi K2.7 Code",
+            "description": "Multimodal reasoning model for agentic coding",
+            "supports_tools": true,
+            "context_length": 262144,
+            "input_price": 0.95,
+            "output_price": 4,
+            "published_at": "2026-06-12",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.19
+          },
+          {
+            "id": "kimi-k3",
+            "name": "Kimi K3",
+            "description": "Flagship multimodal reasoning model for agents",
+            "supports_tools": true,
+            "context_length": 1048576,
+            "input_price": 3,
+            "output_price": 15,
+            "published_at": "2026-07-17",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.3
+          },
           {
             "id": "kimi-k2.6",
             "name": "Kimi K2.6",
@@ -868,7 +1131,10 @@
             "context_length": 256000,
             "input_price": 0.95,
             "output_price": 4.0,
-            "published_at": "2026-04-21"
+            "published_at": "2026-04-21",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.16
           },
           {
             "id": "kimi-k2.5",
@@ -877,7 +1143,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.6,
-            "output_price": 3.0
+            "output_price": 3.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-0905-preview",
@@ -886,7 +1154,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.6,
-            "output_price": 2.4
+            "output_price": 2.4,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-turbo-preview",
@@ -895,7 +1165,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 1.2,
-            "output_price": 8.0
+            "output_price": 8.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-0711-preview",
@@ -904,7 +1176,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 0.6,
-            "output_price": 2.4
+            "output_price": 2.4,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-thinking",
@@ -913,7 +1187,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.6,
-            "output_price": 2.4
+            "output_price": 2.4,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-k2-thinking-turbo",
@@ -922,7 +1198,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 1.2,
-            "output_price": 8.0
+            "output_price": 8.0,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "kimi-latest",
@@ -931,7 +1209,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 0.3,
-            "output_price": 1.5
+            "output_price": 1.5,
+            "deprecated_at": "2026-05-25",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-8k",
@@ -940,7 +1220,9 @@
             "supports_tools": true,
             "context_length": 8192,
             "input_price": 0.3,
-            "output_price": 1.5
+            "output_price": 1.5,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-8k-vision-preview",
@@ -949,7 +1231,9 @@
             "supports_tools": true,
             "context_length": 8192,
             "input_price": 0.3,
-            "output_price": 1.5
+            "output_price": 1.5,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-32k",
@@ -958,7 +1242,9 @@
             "supports_tools": true,
             "context_length": 32768,
             "input_price": 0.75,
-            "output_price": 3.0
+            "output_price": 3.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-32k-vision-preview",
@@ -967,7 +1253,9 @@
             "supports_tools": true,
             "context_length": 32768,
             "input_price": 0.75,
-            "output_price": 3.0
+            "output_price": 3.0,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-128k",
@@ -976,7 +1264,9 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 1.5,
-            "output_price": 4.5
+            "output_price": 4.5,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           },
           {
             "id": "moonshot-v1-128k-vision-preview",
@@ -985,11 +1275,52 @@
             "supports_tools": true,
             "context_length": 131072,
             "input_price": 1.5,
-            "output_price": 4.5
+            "output_price": 4.5,
+            "deprecated_at": "2026-08-31",
+            "replacement_id": "kimi-k3"
           }
         ]
       },
       "models": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "description": "Flagship multimodal reasoning model for agents",
+          "supports_tools": true,
+          "context_length": 1048576,
+          "input_price": 3,
+          "output_price": 15,
+          "published_at": "2026-07-17",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.3
+        },
+        {
+          "id": "kimi-k2.7-code-highspeed",
+          "name": "Kimi K2.7 Code Highspeed",
+          "description": "High-throughput Kimi K2.7 Code endpoint",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 1.9,
+          "output_price": 8,
+          "published_at": "2026-06-18",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.38
+        },
+        {
+          "id": "kimi-k2.7-code",
+          "name": "Kimi K2.7 Code",
+          "description": "Multimodal reasoning model for agentic coding",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.95,
+          "output_price": 4,
+          "published_at": "2026-06-12",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.19
+        },
         {
           "id": "kimi-k2.6",
           "name": "Kimi K2.6",
@@ -998,7 +1329,9 @@
           "context_length": 256000,
           "input_price": 6.5,
           "output_price": 27.0,
-          "published_at": "2026-04-21"
+          "published_at": "2026-04-21",
+          "supports_vision": true,
+          "supports_reasoning": true
         },
         {
           "id": "kimi-k2.5",
@@ -1007,7 +1340,9 @@
           "supports_tools": true,
           "context_length": 262144,
           "input_price": 4.0,
-          "output_price": 21.0
+          "output_price": 21.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-k2-0905-preview",
@@ -1016,7 +1351,9 @@
           "supports_tools": true,
           "context_length": 262144,
           "input_price": 4.0,
-          "output_price": 16.0
+          "output_price": 16.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-k2-turbo-preview",
@@ -1025,7 +1362,9 @@
           "supports_tools": true,
           "context_length": 262144,
           "input_price": 8.0,
-          "output_price": 58.0
+          "output_price": 58.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-k2-0711-preview",
@@ -1034,7 +1373,9 @@
           "supports_tools": true,
           "context_length": 131072,
           "input_price": 4.0,
-          "output_price": 16.0
+          "output_price": 16.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-k2-thinking",
@@ -1043,7 +1384,9 @@
           "supports_tools": true,
           "context_length": 262144,
           "input_price": 4.0,
-          "output_price": 16.0
+          "output_price": 16.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-k2-thinking-turbo",
@@ -1052,7 +1395,9 @@
           "supports_tools": true,
           "context_length": 262144,
           "input_price": 8.0,
-          "output_price": 58.0
+          "output_price": 58.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "kimi-latest",
@@ -1061,7 +1406,9 @@
           "supports_tools": true,
           "context_length": 131072,
           "input_price": 2.0,
-          "output_price": 10.0
+          "output_price": 10.0,
+          "deprecated_at": "2026-05-25",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-8k",
@@ -1070,7 +1417,9 @@
           "supports_tools": true,
           "context_length": 8192,
           "input_price": 2.0,
-          "output_price": 10.0
+          "output_price": 10.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-8k-vision-preview",
@@ -1079,7 +1428,9 @@
           "supports_tools": true,
           "context_length": 8192,
           "input_price": 2.0,
-          "output_price": 10.0
+          "output_price": 10.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-32k",
@@ -1088,7 +1439,9 @@
           "supports_tools": true,
           "context_length": 32768,
           "input_price": 5.0,
-          "output_price": 20.0
+          "output_price": 20.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-32k-vision-preview",
@@ -1097,7 +1450,9 @@
           "supports_tools": true,
           "context_length": 32768,
           "input_price": 5.0,
-          "output_price": 20.0
+          "output_price": 20.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-128k",
@@ -1106,7 +1461,9 @@
           "supports_tools": true,
           "context_length": 131072,
           "input_price": 10.0,
-          "output_price": 30.0
+          "output_price": 30.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         },
         {
           "id": "moonshot-v1-128k-vision-preview",
@@ -1115,7 +1472,9 @@
           "supports_tools": true,
           "context_length": 131072,
           "input_price": 10.0,
-          "output_price": 30.0
+          "output_price": 30.0,
+          "deprecated_at": "2026-08-31",
+          "replacement_id": "kimi-k3"
         }
       ]
     },
@@ -1147,7 +1506,10 @@
             "context_length": 1000000,
             "input_price": 4.2,
             "output_price": 16.8,
-            "published_at": "2026-06-01"
+            "published_at": "2026-06-01",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.84
           },
           {
             "id": "MiniMax-M2.7",
@@ -1179,7 +1541,10 @@
             "context_length": 1000000,
             "input_price": 0.6,
             "output_price": 2.4,
-            "published_at": "2026-06-01"
+            "published_at": "2026-06-01",
+            "supports_vision": true,
+            "supports_reasoning": true,
+            "cache_read_price": 0.12
           },
           {
             "id": "MiniMax-M2.7",
@@ -1212,7 +1577,10 @@
           "context_length": 1000000,
           "input_price": 4.2,
           "output_price": 16.8,
-          "published_at": "2026-06-01"
+          "published_at": "2026-06-01",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.84
         },
         {
           "id": "MiniMax-M2.7",
@@ -1442,9 +1810,11 @@
             "description": "Pro-series model for complex reasoning and long documents; 1M context, 128K max output; deep thinking, tools, structured output, web search",
             "supports_tools": true,
             "context_length": 1000000,
-            "input_price": 7.0,
-            "output_price": 21.0,
-            "published_at": "2026-04-30"
+            "input_price": 3,
+            "output_price": 6,
+            "published_at": "2026-04-23",
+            "supports_reasoning": true,
+            "cache_read_price": 0.025
           },
           {
             "id": "mimo-v2-pro",
@@ -1453,7 +1823,9 @@
             "supports_tools": true,
             "context_length": 1000000,
             "input_price": 7.0,
-            "output_price": 21.0
+            "output_price": 21.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2.5",
@@ -1461,9 +1833,12 @@
             "description": "Omni-series full-modal model for image, audio, and video understanding; 1M context, 128K max output; deep thinking, tools, structured output, web search",
             "supports_tools": true,
             "context_length": 1000000,
-            "input_price": 2.8,
-            "output_price": 14.0,
-            "published_at": "2026-04-30"
+            "input_price": 1,
+            "output_price": 2,
+            "published_at": "2026-04-23",
+            "supports_reasoning": true,
+            "supports_vision": true,
+            "cache_read_price": 0.02
           },
           {
             "id": "mimo-v2-omni",
@@ -1472,7 +1847,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 2.8,
-            "output_price": 14.0
+            "output_price": 14.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2-flash",
@@ -1481,7 +1858,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.7,
-            "output_price": 2.1
+            "output_price": 2.1,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2.5-tts",
@@ -1517,7 +1896,9 @@
             "supports_tools": false,
             "context_length": 8000,
             "input_price": 0.0,
-            "output_price": 0.0
+            "output_price": 0.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           }
         ],
         "global": [
@@ -1527,9 +1908,11 @@
             "description": "Pro-series model for complex reasoning and long documents; 1M context, 128K max output; deep thinking, tools, structured output, web search",
             "supports_tools": true,
             "context_length": 1000000,
-            "input_price": 1.0,
-            "output_price": 3.0,
-            "published_at": "2026-04-30"
+            "input_price": 0.435,
+            "output_price": 0.87,
+            "published_at": "2026-04-23",
+            "supports_reasoning": true,
+            "cache_read_price": 0.0036
           },
           {
             "id": "mimo-v2-pro",
@@ -1538,7 +1921,9 @@
             "supports_tools": true,
             "context_length": 1000000,
             "input_price": 1.0,
-            "output_price": 3.0
+            "output_price": 3.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2.5",
@@ -1546,9 +1931,12 @@
             "description": "Omni-series full-modal model for image, audio, and video understanding; 1M context, 128K max output; deep thinking, tools, structured output, web search",
             "supports_tools": true,
             "context_length": 1000000,
-            "input_price": 0.4,
-            "output_price": 2.0,
-            "published_at": "2026-04-30"
+            "input_price": 0.14,
+            "output_price": 0.28,
+            "published_at": "2026-04-23",
+            "supports_reasoning": true,
+            "supports_vision": true,
+            "cache_read_price": 0.0028
           },
           {
             "id": "mimo-v2-omni",
@@ -1557,7 +1945,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.4,
-            "output_price": 2.0
+            "output_price": 2.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2-flash",
@@ -1566,7 +1956,9 @@
             "supports_tools": true,
             "context_length": 256000,
             "input_price": 0.1,
-            "output_price": 0.3
+            "output_price": 0.3,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           },
           {
             "id": "mimo-v2.5-tts",
@@ -1602,7 +1994,9 @@
             "supports_tools": false,
             "context_length": 8000,
             "input_price": 0.0,
-            "output_price": 0.0
+            "output_price": 0.0,
+            "deprecated_at": "2026-06-30",
+            "replacement_id": "mimo-v2.5"
           }
         ]
       },
@@ -1613,9 +2007,11 @@
           "description": "Pro-series model for complex reasoning and long documents; 1M context, 128K max output; deep thinking, tools, structured output, web search",
           "supports_tools": true,
           "context_length": 1000000,
-          "input_price": 7.0,
-          "output_price": 21.0,
-          "published_at": "2026-04-30"
+          "input_price": 3,
+          "output_price": 6,
+          "published_at": "2026-04-23",
+          "supports_reasoning": true,
+          "cache_read_price": 0.025
         },
         {
           "id": "mimo-v2-pro",
@@ -1624,7 +2020,9 @@
           "supports_tools": true,
           "context_length": 1000000,
           "input_price": 7.0,
-          "output_price": 21.0
+          "output_price": 21.0,
+          "deprecated_at": "2026-06-30",
+          "replacement_id": "mimo-v2.5"
         },
         {
           "id": "mimo-v2.5",
@@ -1632,9 +2030,12 @@
           "description": "Omni-series full-modal model for image, audio, and video understanding; 1M context, 128K max output; deep thinking, tools, structured output, web search",
           "supports_tools": true,
           "context_length": 1000000,
-          "input_price": 2.8,
-          "output_price": 14.0,
-          "published_at": "2026-04-30"
+          "input_price": 1,
+          "output_price": 2,
+          "published_at": "2026-04-23",
+          "supports_reasoning": true,
+          "supports_vision": true,
+          "cache_read_price": 0.02
         },
         {
           "id": "mimo-v2-omni",
@@ -1643,7 +2044,9 @@
           "supports_tools": true,
           "context_length": 256000,
           "input_price": 2.8,
-          "output_price": 14.0
+          "output_price": 14.0,
+          "deprecated_at": "2026-06-30",
+          "replacement_id": "mimo-v2.5"
         },
         {
           "id": "mimo-v2-flash",
@@ -1652,7 +2055,9 @@
           "supports_tools": true,
           "context_length": 256000,
           "input_price": 0.7,
-          "output_price": 2.1
+          "output_price": 2.1,
+          "deprecated_at": "2026-06-30",
+          "replacement_id": "mimo-v2.5"
         },
         {
           "id": "mimo-v2.5-tts",
@@ -1688,7 +2093,9 @@
           "supports_tools": false,
           "context_length": 8000,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-06-30",
+          "replacement_id": "mimo-v2.5"
         }
       ]
     },
@@ -1718,9 +2125,12 @@
             "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
             "supports_tools": true,
             "context_length": 1000000,
-            "input_price": 6.0,
-            "output_price": 24.0,
-            "published_at": "2026-06-17"
+            "input_price": 8,
+            "output_price": 28,
+            "published_at": "2026-07-01",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 2
           },
           {
             "id": "glm-5.1",
@@ -1922,7 +2332,10 @@
             "context_length": 1000000,
             "input_price": 1.4,
             "output_price": 4.4,
-            "published_at": "2026-06-17"
+            "published_at": "2026-07-01",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.26
           },
           {
             "id": "glm-5.1",
@@ -2114,9 +2527,12 @@
           "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
           "supports_tools": true,
           "context_length": 1000000,
-          "input_price": 6.0,
-          "output_price": 24.0,
-          "published_at": "2026-06-17"
+          "input_price": 8,
+          "output_price": 28,
+          "published_at": "2026-07-01",
+          "supports_reasoning": true,
+          "supports_vision": false,
+          "cache_read_price": 2
         },
         {
           "id": "glm-5.1",
@@ -2284,6 +2700,71 @@
         }
       },
       "models": [
+        {
+          "id": "kimi-k3",
+          "name": "Kimi K3",
+          "description": "Kimi model served through Tencent TokenHub",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 20,
+          "output_price": 100,
+          "published_at": "2026-07-17",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 2
+        },
+        {
+          "id": "mimo-v2.5-pro",
+          "name": "MiMo V2.5 Pro",
+          "description": "MiMo model served through Tencent TokenHub",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 3,
+          "output_price": 6,
+          "published_at": "2026-07-27",
+          "supports_vision": false,
+          "supports_reasoning": true,
+          "cache_read_price": 0.025
+        },
+        {
+          "id": "hy3",
+          "name": "Hunyuan HY3",
+          "description": "Hunyuan reasoning model with tool use",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 1,
+          "output_price": 4,
+          "published_at": "2026-07-06",
+          "supports_vision": false,
+          "supports_reasoning": true,
+          "cache_read_price": 0.25
+        },
+        {
+          "id": "kimi-k2.7-code-highspeed",
+          "name": "Kimi K2.7 Code Highspeed",
+          "description": "High-throughput coding model on TokenHub",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 13,
+          "output_price": 54,
+          "published_at": "2026-06-26",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 2.6
+        },
+        {
+          "id": "glm-5.2",
+          "name": "GLM-5.2",
+          "description": "Long-context reasoning model on TokenHub",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 8,
+          "output_price": 28,
+          "published_at": "2026-06-17",
+          "supports_vision": false,
+          "supports_reasoning": true,
+          "cache_read_price": 2
+        },
         {
           "id": "hy3-preview",
           "name": "Hy3 Preview",
@@ -2460,6 +2941,71 @@
         }
       },
       "models": [
+        {
+          "id": "doubao-seed-2-1-pro-260628",
+          "name": "Doubao Seed 2.1 Pro",
+          "description": "Flagship multimodal coding and agent model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 6,
+          "output_price": 30,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 1.2
+        },
+        {
+          "id": "doubao-seed-2-1-turbo-260628",
+          "name": "Doubao Seed 2.1 Turbo",
+          "description": "Low-latency multimodal agent model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 3,
+          "output_price": 15,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.6
+        },
+        {
+          "id": "doubao-seed-evolving",
+          "name": "Doubao Seed Evolving",
+          "description": "Continuously updated multimodal reasoning model",
+          "supports_tools": true,
+          "context_length": 1024000,
+          "input_price": 6,
+          "output_price": 30,
+          "published_at": "2026-07-14",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 1.2
+        },
+        {
+          "id": "doubao-seed-character-260628",
+          "name": "Doubao Seed Character",
+          "description": "Multimodal role-play model",
+          "supports_tools": true,
+          "context_length": 32000,
+          "input_price": 0.8,
+          "output_price": 2,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.16
+        },
+        {
+          "id": "glm-5-2-260617",
+          "name": "GLM-5.2",
+          "description": "GLM-5.2 on Volcengine Ark",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 8,
+          "output_price": 28,
+          "published_at": "2026-07-01",
+          "supports_vision": false,
+          "supports_reasoning": true,
+          "cache_read_price": 2
+        },
         {
           "id": "deepseek-v4-flash",
           "name": "DeepSeek V4 Flash",
@@ -2804,6 +3350,19 @@
       },
       "models": [
         {
+          "id": "LongCat-2.0",
+          "name": "LongCat 2.0",
+          "description": "Production long-context reasoning and agent model",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 5,
+          "output_price": 20,
+          "published_at": "2026-06-30",
+          "supports_vision": false,
+          "supports_reasoning": true,
+          "cache_read_price": 0.1
+        },
+        {
           "id": "LongCat-2.0-Preview",
           "name": "LongCat 2.0 Preview",
           "description": "Trillion-parameter MoE flagship with 1M context, agentic tool use, and 128K max output",
@@ -2811,7 +3370,9 @@
           "context_length": 1000000,
           "input_price": 0.0,
           "output_price": 0.0,
-          "published_at": "2026-04-24"
+          "published_at": "2026-04-20",
+          "deprecated_at": "2026-06-30",
+          "replacement_id": "LongCat-2.0"
         },
         {
           "id": "LongCat-Flash-Omni-2603",
@@ -2821,7 +3382,10 @@
           "context_length": 256000,
           "input_price": 0.0,
           "output_price": 0.0,
-          "published_at": "2026-03-01"
+          "published_at": "2026-03-01",
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0",
+          "supports_vision": true
         },
         {
           "id": "LongCat-Flash-Chat-2602-Exp",
@@ -2831,7 +3395,9 @@
           "context_length": 256000,
           "input_price": 0.0,
           "output_price": 0.0,
-          "published_at": "2026-02-01"
+          "published_at": "2026-02-01",
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0"
         },
         {
           "id": "LongCat-Flash-Thinking-2601",
@@ -2841,7 +3407,9 @@
           "context_length": 256000,
           "input_price": 0.0,
           "output_price": 0.0,
-          "published_at": "2026-01-01"
+          "published_at": "2026-01-01",
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0"
         },
         {
           "id": "LongCat-Flash-Thinking",
@@ -2851,7 +3419,9 @@
           "context_length": 256000,
           "input_price": 0.0,
           "output_price": 0.0,
-          "published_at": "2025-09-22"
+          "published_at": "2025-09-22",
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0"
         },
         {
           "id": "LongCat-Flash-Chat",
@@ -2860,7 +3430,9 @@
           "supports_tools": true,
           "context_length": 256000,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0"
         },
         {
           "id": "LongCat-Flash-Lite",
@@ -2869,7 +3441,9 @@
           "supports_tools": true,
           "context_length": 256000,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-05-29",
+          "replacement_id": "LongCat-2.0"
         }
       ]
     },
@@ -2886,16 +3460,27 @@
       },
       "models": [
         {
-          "id": "gemma-4-31b-it",
+          "id": "qwen/qwen3.7-max",
+          "name": "Qwen3.7 Max",
+          "description": "Qwen flagship routed through OpenRouter",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 2.5,
+          "output_price": 7.5,
+          "published_at": "2026-05-21",
+          "supports_vision": false,
+          "supports_reasoning": true
+        },
+        {
+          "id": "google/gemma-4-31b-it",
           "name": "Gemma 4 31B",
           "description": "Google DeepMind 30.7B dense multimodal instruct model with 256K context, vision input, native function calling, configurable thinking/reasoning, and 140+ languages; Apache 2.0",
           "supports_tools": true,
           "supports_vision": true,
           "supports_reasoning": true,
           "context_length": 262144,
-          "input_price": 0.12,
-          "output_price": 0.37,
-          "cache_read_price": 0.1,
+          "input_price": 0.09,
+          "output_price": 0.34,
           "published_at": "2026-04-02"
         },
         {
@@ -2915,12 +3500,24 @@
         "global": {
           "label": "Zenmux.ai",
           "region": "global",
-          "base_url": "https://api.zenmux.ai/v1",
+          "base_url": "https://zenmux.ai/api/v1",
           "price_currency": "USD",
           "docs_url": "https://docs.zenmux.ai"
         }
       },
       "models": [
+        {
+          "id": "anthropic/claude-opus-5",
+          "name": "Claude Opus 5",
+          "description": "Claude flagship routed through ZenMux",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 5,
+          "output_price": 25,
+          "published_at": "2026-07-24",
+          "supports_vision": true,
+          "supports_reasoning": true
+        },
         {
           "id": "zenmux/auto",
           "name": "Zenmux Auto",
@@ -2938,12 +3535,25 @@
         "global": {
           "label": "Baseten",
           "region": "global",
-          "base_url": "https://bridge.baseten.co/v1",
+          "base_url": "https://inference.baseten.co/v1",
           "price_currency": "USD",
           "docs_url": "https://docs.baseten.co"
         }
       },
       "models": [
+        {
+          "id": "moonshotai/Kimi-K3",
+          "name": "Kimi K3",
+          "description": "Baseten Model API deployment of Kimi K3",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 3,
+          "output_price": 15,
+          "published_at": "2026-07-27",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.3
+        },
         {
           "id": "baseten/auto",
           "name": "Baseten Auto",
@@ -2951,7 +3561,9 @@
           "supports_tools": true,
           "context_length": null,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-07-27",
+          "replacement_id": "moonshotai/Kimi-K3"
         }
       ]
     },
@@ -2968,22 +3580,36 @@
       },
       "models": [
         {
+          "id": "gemma-4-31b",
+          "name": "Gemma 4 31B",
+          "description": "Multimodal reasoning model for visual and agentic workflows on Cerebras",
+          "supports_tools": true,
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "context_length": 131072,
+          "input_price": 2.15,
+          "output_price": 2.7,
+          "published_at": "2026-07-08"
+        },
+        {
           "id": "llama3.1-8b",
           "name": "Llama 3.1 8B",
           "description": "Production Llama 3.1 8B served by Cerebras",
           "supports_tools": true,
           "context_length": null,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-07-31"
         },
         {
           "id": "gpt-oss-120b",
           "name": "OpenAI GPT OSS",
           "description": "Production OpenAI GPT OSS 120B served by Cerebras",
           "supports_tools": true,
-          "context_length": null,
-          "input_price": 0.0,
-          "output_price": 0.0
+          "context_length": 131072,
+          "input_price": 0.35,
+          "output_price": 0.75,
+          "supports_reasoning": true
         },
         {
           "id": "qwen-3-235b-a22b-instruct-2507",
@@ -2992,7 +3618,8 @@
           "supports_tools": true,
           "context_length": null,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-07-31"
         },
         {
           "id": "zai-glm-5.1",
@@ -3008,9 +3635,11 @@
           "name": "Z.ai GLM 4.7",
           "description": "Preview Zhipu GLM 4.7 served by Cerebras",
           "supports_tools": true,
-          "context_length": null,
-          "input_price": 0.0,
-          "output_price": 0.0
+          "context_length": 131072,
+          "input_price": 2.25,
+          "output_price": 2.75,
+          "supports_reasoning": true,
+          "deprecated_at": "2026-08-17"
         }
       ]
     },
@@ -3026,6 +3655,32 @@
         }
       },
       "models": [
+        {
+          "id": "grok-4.5",
+          "name": "Grok 4.5",
+          "description": "Flagship multimodal reasoning model",
+          "supports_tools": true,
+          "context_length": 500000,
+          "input_price": 2,
+          "output_price": 6,
+          "published_at": "2026-07-16",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.3
+        },
+        {
+          "id": "grok-build-0.1",
+          "name": "Grok Build 0.1",
+          "description": "Agentic software-building model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 1,
+          "output_price": 2,
+          "published_at": "2026-05-29",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.2
+        },
         {
           "id": "grok-4.3",
           "name": "Grok 4.3",
@@ -3158,13 +3813,41 @@
       },
       "models": [
         {
+          "id": "mistral-medium-3-5",
+          "name": "Mistral Medium 3.5",
+          "description": "Balanced multimodal reasoning model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 1.5,
+          "output_price": 7.5,
+          "published_at": "2026-04-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.15
+        },
+        {
+          "id": "mistral-small-2603",
+          "name": "Mistral Small 4",
+          "description": "Efficient multimodal reasoning model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 0.15,
+          "output_price": 0.6,
+          "published_at": "2026-03-16",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.015
+        },
+        {
           "id": "mistral-large-latest",
           "name": "Mistral Large Latest",
           "description": "Flagship reasoning and multimodal model",
           "supports_tools": true,
-          "context_length": 128000,
-          "input_price": 0.0,
-          "output_price": 0.0
+          "context_length": 256000,
+          "input_price": 0.5,
+          "output_price": 1.5,
+          "cache_read_price": 0.05,
+          "supports_vision": true
         },
         {
           "id": "mistral-small-latest",
@@ -3181,8 +3864,9 @@
           "description": "Code-specialized model",
           "supports_tools": true,
           "context_length": 128000,
-          "input_price": 0.0,
-          "output_price": 0.0
+          "input_price": 0.3,
+          "output_price": 0.9,
+          "cache_read_price": 0.03
         },
         {
           "id": "pixtral-12b-vision",
@@ -3191,7 +3875,9 @@
           "supports_tools": true,
           "context_length": 128000,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "deprecated_at": "2026-07-31",
+          "replacement_id": "mistral-small-2603"
         }
       ]
     }
