@@ -262,3 +262,11 @@ assert_eq!(canonical_model_id("google/gemini-3.5-flash"), "gemini-3.5-flash");
 ```
 
 Export schema: `schemas/pararouter-export-v1.json`.
+
+## Cursor Cloud specific instructions
+
+- This is a pure Rust library + CLI (`llm_providers`); there are no long-running services, databases, or GUI. Validate work entirely from the terminal.
+- The crate uses `edition = "2024"`, which requires Rust >= 1.85. The base image ships an older `rustc`, so the update script pins the `stable` toolchain (currently 1.97+). If a build fails with an edition/feature error, run `rustup default stable`.
+- Standard commands are already documented above and in `README.md` / `CONTRIBUTING.md`: `cargo test`, `cargo fmt --all -- --check`, `cargo clippy -- -D warnings`, `cargo check --examples`, and `cargo run -- export --format pararouter [--output FILE]`.
+- `build.rs` embeds and validates `data/providers.json` at compile time, so any JSON error surfaces as a build panic during `cargo build`/`cargo test` rather than at runtime.
+- The `simple_chat` example only performs a live API call when `OPENAI_API_KEY` is set; otherwise it prints registry info and exits cleanly.
