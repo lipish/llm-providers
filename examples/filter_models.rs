@@ -1,4 +1,4 @@
-use llm_providers::{ModelFilter, filter_offerings, list_catalog_models};
+use eero_llm_providers::{ModelFilter, filter_offerings, list_catalog_models};
 
 fn main() {
     let catalog = list_catalog_models();

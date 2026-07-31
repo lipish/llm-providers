@@ -8,8 +8,8 @@
   </p>
 
   <p>
-    <a href="https://github.com/lipish/llm-providers/actions"><img src="https://github.com/lipish/llm-providers/ci.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://crates.io/crates/llm_providers"><img src="https://img.shields.io/crates/v/llm_providers.svg" alt="Crates.io"></a>
+    <a href="https://github.com/EeroEternal/llm-providers/actions"><img src="https://github.com/EeroEternal/llm-providers/actions/workflows/ci.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://crates.io/crates/eero_llm_providers"><img src="https://img.shields.io/crates/v/eero_llm_providers.svg" alt="Crates.io"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   </p>
 </div>
@@ -26,13 +26,13 @@
 
 ```toml
 [dependencies]
-llm_providers = "0.14"
+eero_llm_providers = "0.14"
 ```
 
 ## Usage
 
 ```rust
-use llm_providers::{
+use eero_llm_providers::{
     canonical_model_id, export_pararouter_registry, get_model_for_endpoint,
     list_catalog_models, list_offerings,
 };
@@ -62,7 +62,7 @@ fn main() {
 ## ParaRouter Export
 
 ```bash
-cargo run -- export --format pararouter --output llm_providers_registry.json
+cargo run -- export --format pararouter --output eero_llm_providers_registry.json
 ```
 
 Export shape is documented in [`schemas/pararouter-export-v1.json`](schemas/pararouter-export-v1.json):
