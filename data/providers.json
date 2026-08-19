@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "updated_at": "2026-07-31T03:13:00.000000Z",
+  "updated_at": "2026-08-19T04:12:14.000000Z",
   "providers": {
     "google": {
       "label": "Google Gemini",
@@ -730,6 +730,19 @@
         }
       },
       "models": [
+        {
+          "id": "qwen3.8-max",
+          "name": "Qwen3.8 Max",
+          "description": "Flagship 2.4T-parameter MoE model with native vision understanding, 1M context, and long-horizon agentic execution for coding, legal, finance, and design tasks",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 12,
+          "output_price": 36,
+          "published_at": "2026-08-03",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 1.5
+        },
         {
           "id": "qwen3.7-max",
           "name": "Qwen3.7 Max",
@@ -2120,6 +2133,19 @@
       "endpoint_models": {
         "cn": [
           {
+            "id": "glm-5.3",
+            "name": "GLM-5.3",
+            "description": "Latest flagship for complex software engineering, long-horizon agent tasks, and cybersecurity with 1M context and 128K max output",
+            "supports_tools": true,
+            "context_length": 1000000,
+            "input_price": 8,
+            "output_price": 28,
+            "published_at": "2026-08-14",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 2
+          },
+          {
             "id": "glm-5.2",
             "name": "GLM-5.2",
             "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
@@ -2325,6 +2351,19 @@
         ],
         "global": [
           {
+            "id": "glm-5.3",
+            "name": "GLM-5.3",
+            "description": "Latest flagship for complex software engineering, long-horizon agent tasks, and cybersecurity with 1M context and 128K max output",
+            "supports_tools": true,
+            "context_length": 1000000,
+            "input_price": 1.4,
+            "output_price": 4.4,
+            "published_at": "2026-08-14",
+            "supports_reasoning": true,
+            "supports_vision": false,
+            "cache_read_price": 0.26
+          },
+          {
             "id": "glm-5.2",
             "name": "GLM-5.2",
             "description": "Latest flagship with usable 1M context, stronger long-horizon coding and agentic execution",
@@ -2521,6 +2560,19 @@
         ]
       },
       "models": [
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "description": "Latest flagship for complex software engineering, long-horizon agent tasks, and cybersecurity with 1M context and 128K max output",
+          "supports_tools": true,
+          "context_length": 1000000,
+          "input_price": 8,
+          "output_price": 28,
+          "published_at": "2026-08-14",
+          "supports_reasoning": true,
+          "supports_vision": false,
+          "cache_read_price": 2
+        },
         {
           "id": "glm-5.2",
           "name": "GLM-5.2",

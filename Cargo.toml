@@ -1,6 +1,6 @@
 [package]
 name = "eero_llm_providers"
-version = "0.14.5"
+version = "0.14.6"
 edition = "2024"
 description = "A unified source of truth for LLM providers, models, pricing, and capabilities."
 license = "MIT"
