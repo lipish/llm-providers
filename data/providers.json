@@ -1,6 +1,6 @@
 {
   "version": "3.0",
-  "updated_at": "2026-08-19T04:12:14.000000Z",
+  "updated_at": "2026-08-30T02:07:38.000000Z",
   "providers": {
     "google": {
       "label": "Google Gemini",
@@ -2994,32 +2994,6 @@
       },
       "models": [
         {
-          "id": "doubao-seed-2-1-pro-260628",
-          "name": "Doubao Seed 2.1 Pro",
-          "description": "Flagship multimodal coding and agent model",
-          "supports_tools": true,
-          "context_length": 256000,
-          "input_price": 6,
-          "output_price": 30,
-          "published_at": "2026-06-28",
-          "supports_vision": true,
-          "supports_reasoning": true,
-          "cache_read_price": 1.2
-        },
-        {
-          "id": "doubao-seed-2-1-turbo-260628",
-          "name": "Doubao Seed 2.1 Turbo",
-          "description": "Low-latency multimodal agent model",
-          "supports_tools": true,
-          "context_length": 256000,
-          "input_price": 3,
-          "output_price": 15,
-          "published_at": "2026-06-28",
-          "supports_vision": true,
-          "supports_reasoning": true,
-          "cache_read_price": 0.6
-        },
-        {
           "id": "doubao-seed-evolving",
           "name": "Doubao Seed Evolving",
           "description": "Continuously updated multimodal reasoning model",
@@ -3031,19 +3005,6 @@
           "supports_vision": true,
           "supports_reasoning": true,
           "cache_read_price": 1.2
-        },
-        {
-          "id": "doubao-seed-character-260628",
-          "name": "Doubao Seed Character",
-          "description": "Multimodal role-play model",
-          "supports_tools": true,
-          "context_length": 32000,
-          "input_price": 0.8,
-          "output_price": 2,
-          "published_at": "2026-06-28",
-          "supports_vision": true,
-          "supports_reasoning": true,
-          "cache_read_price": 0.16
         },
         {
           "id": "glm-5-2-260617",
@@ -3059,14 +3020,63 @@
           "cache_read_price": 2
         },
         {
-          "id": "deepseek-v4-flash",
-          "name": "DeepSeek V4 Flash",
-          "description": "Efficient V4 model with 1M context, hybrid thinking and tool calling",
+          "id": "doubao-seed-character-260628",
+          "name": "Doubao Seed Character",
+          "description": "Multimodal role-play model",
           "supports_tools": true,
-          "context_length": 1000000,
-          "input_price": 1.0,
+          "context_length": 32000,
+          "input_price": 0.8,
+          "output_price": 2,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.16
+        },
+        {
+          "id": "doubao-seed-2-1-turbo-260628",
+          "name": "Doubao Seed 2.1 Turbo",
+          "description": "Low-latency multimodal agent model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 3,
+          "output_price": 15,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 0.6
+        },
+        {
+          "id": "doubao-seed-2-1-pro-260628",
+          "name": "Doubao Seed 2.1 Pro",
+          "description": "Flagship multimodal coding and agent model",
+          "supports_tools": true,
+          "context_length": 256000,
+          "input_price": 6,
+          "output_price": 30,
+          "published_at": "2026-06-28",
+          "supports_vision": true,
+          "supports_reasoning": true,
+          "cache_read_price": 1.2
+        },
+        {
+          "id": "doubao-seed-2-0-mini-260428",
+          "name": "Doubao Seed 2.0 Mini",
+          "description": "Seed 2.0 mini model",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.2,
           "output_price": 2.0,
-          "published_at": "2026-04-24"
+          "published_at": "2026-04-28"
+        },
+        {
+          "id": "doubao-seed-2-0-lite-260428",
+          "name": "Doubao Seed 2.0 Lite",
+          "description": "Seed 2.0 lite model",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.6,
+          "output_price": 3.6,
+          "published_at": "2026-04-28"
         },
         {
           "id": "deepseek-v4-pro",
@@ -3079,14 +3089,14 @@
           "published_at": "2026-04-24"
         },
         {
-          "id": "glm-5.1",
-          "name": "GLM-5.1",
-          "description": "Zhipu GLM-5.1 with 200K context, deep thinking and prefix completion",
+          "id": "deepseek-v4-flash",
+          "name": "DeepSeek V4 Flash",
+          "description": "Efficient V4 model with 1M context, hybrid thinking and tool calling",
           "supports_tools": true,
-          "context_length": 200000,
-          "input_price": 6.0,
-          "output_price": 24.0,
-          "published_at": "2026-04-07"
+          "context_length": 1000000,
+          "input_price": 1.0,
+          "output_price": 2.0,
+          "published_at": "2026-04-24"
         },
         {
           "id": "kimi-k2.6",
@@ -3099,6 +3109,16 @@
           "published_at": "2026-04-21"
         },
         {
+          "id": "glm-5.1",
+          "name": "GLM-5.1",
+          "description": "Zhipu GLM-5.1 with 200K context, deep thinking and prefix completion",
+          "supports_tools": true,
+          "context_length": 200000,
+          "input_price": 6.0,
+          "output_price": 24.0,
+          "published_at": "2026-04-07"
+        },
+        {
           "id": "MiniMax-M2.7",
           "name": "MiniMax M2.7",
           "description": "MiniMax M2.7 with 200K context, agent harness and tool calling",
@@ -3109,26 +3129,202 @@
           "published_at": "2026-03-18"
         },
         {
-          "id": "GLM-4.7",
-          "name": "GLM-4.7",
-          "description": "Zhipu GLM model provided via Ark",
+          "id": "doubao-seed-2-0-pro-260215",
+          "name": "Doubao Seed 2.0 Pro",
+          "description": "Seed 2.0 pro model",
           "supports_tools": true,
-          "context_length": 200000,
+          "context_length": 262144,
+          "input_price": 3.2,
+          "output_price": 16.0,
+          "published_at": "2026-02-15"
+        },
+        {
+          "id": "doubao-seed-2-0-code-preview-260215",
+          "name": "Doubao Seed 2.0 Code",
+          "description": "Seed 2.0 coding model",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 3.2,
+          "output_price": 16.0,
+          "published_at": "2026-02-15"
+        },
+        {
+          "id": "doubao-seed-1-8-251215",
+          "name": "Doubao Seed 1.8",
+          "description": "Most powerful multimodal agent model with enhanced capabilities",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.8,
+          "output_price": 2.0,
+          "published_at": "2025-12-15"
+        },
+        {
+          "id": "deepseek-v3-2-251201",
+          "name": "DeepSeek V3.2",
+          "description": "Deep thinking, text generation, tool calling",
+          "supports_tools": true,
+          "context_length": 131072,
           "input_price": 2.0,
+          "output_price": 3.0,
+          "published_at": "2025-12-01"
+        },
+        {
+          "id": "kimi-k2-thinking-251104",
+          "name": "Kimi K2",
+          "description": "Kimi K2 model provided via Ark",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 4.0,
+          "output_price": 16.0,
+          "published_at": "2025-11-04"
+        },
+        {
+          "id": "doubao-seed-code-preview-251028",
+          "name": "Doubao Seed Code Preview",
+          "description": "Programming enhanced - deep thinking, text generation, multimodal understanding, tool calling",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 1.2,
+          "output_price": 8.0,
+          "published_at": "2025-10-28"
+        },
+        {
+          "id": "doubao-seed-1-6-lite-251015",
+          "name": "Doubao Seed 1.6 Lite",
+          "description": "Lightweight model with deep thinking, text generation, multimodal understanding, tool calling",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.3,
+          "output_price": 0.6,
+          "published_at": "2025-10-15"
+        },
+        {
+          "id": "doubao-seed-1-6-251015",
+          "name": "Doubao Seed 1.6",
+          "description": "General model with deep thinking, text generation and tool calling",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.8,
+          "output_price": 2.0,
+          "published_at": "2025-10-15"
+        },
+        {
+          "id": "doubao-seed-translation-250915",
+          "name": "Doubao Seed Translation",
+          "description": "Translation enhanced model",
+          "supports_tools": false,
+          "context_length": 4096,
+          "input_price": 1.2,
+          "output_price": 3.6,
+          "published_at": "2025-09-15"
+        },
+        {
+          "id": "doubao-seed-1-6-flash-250828",
+          "name": "Doubao Seed 1.6 Flash",
+          "description": "Fast model with deep thinking, text generation, vision grounding, multimodal understanding",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.15,
+          "output_price": 1.5,
+          "published_at": "2025-08-28"
+        },
+        {
+          "id": "doubao-seed-1-6-vision-250815",
+          "name": "Doubao Seed 1.6 Vision",
+          "description": "Vision model with deep thinking, multimodal understanding, GUI task processing",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.8,
+          "output_price": 8.0,
+          "published_at": "2025-08-15"
+        },
+        {
+          "id": "doubao-1-5-vision-pro-32k-250115",
+          "name": "Doubao 1.5 Vision Pro",
+          "description": "Vision pro model",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 3.0,
+          "output_price": 9.0,
+          "published_at": "2025-01-15"
+        },
+        {
+          "id": "doubao-1-5-pro-32k-250115",
+          "name": "Doubao 1.5 Pro 32K",
+          "description": "Pro 32K model",
+          "supports_tools": true,
+          "context_length": 32768,
+          "input_price": 0.8,
+          "output_price": 2.0,
+          "published_at": "2025-01-15"
+        },
+        {
+          "id": "doubao-1-5-lite-32k-250115",
+          "name": "Doubao 1.5 Lite 32K",
+          "description": "Lite 32K model",
+          "supports_tools": true,
+          "context_length": 32768,
+          "input_price": 0.3,
+          "output_price": 0.6,
+          "published_at": "2025-01-15"
+        },
+        {
+          "id": "doubao-seed-1.6-thinking",
+          "name": "Doubao Seed 1.6 Thinking",
+          "description": "Deep thinking model. Prefer a dated Volcengine Ark Model ID if this alias returns 404.",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 0.8,
           "output_price": 8.0
         },
         {
-          "id": "deepseek-r1",
-          "name": "DeepSeek R1",
-          "description": "Deep thinking model",
+          "id": "doubao-1.5-vision-lite",
+          "name": "Doubao 1.5 Vision Lite",
+          "description": "Vision lite model. Prefer a dated Volcengine Ark Model ID if this alias returns 404.",
           "supports_tools": true,
-          "context_length": 131072,
+          "context_length": 262144,
+          "input_price": 1.5,
+          "output_price": 4.5
+        },
+        {
+          "id": "doubao-1.5-ui-tars",
+          "name": "Doubao 1.5 UI Tars",
+          "description": "GUI task model. Prefer a dated Volcengine Ark Model ID if this alias returns 404.",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 3.5,
+          "output_price": 12.0
+        },
+        {
+          "id": "doubao-1.5-thinking-vision-pro",
+          "name": "Doubao 1.5 Thinking Vision Pro",
+          "description": "Thinking + vision model. Prefer a dated Volcengine Ark Model ID if this alias returns 404.",
+          "supports_tools": true,
+          "context_length": 262144,
+          "input_price": 3.0,
+          "output_price": 9.0
+        },
+        {
+          "id": "doubao-1.5-thinking-pro",
+          "name": "Doubao 1.5 Thinking Pro",
+          "description": "Thinking Pro model. Prefer a dated Volcengine Ark Model ID if this alias returns 404.",
+          "supports_tools": true,
+          "context_length": 262144,
           "input_price": 4.0,
           "output_price": 16.0
         },
         {
           "id": "deepseek-v3.1",
           "name": "DeepSeek V3.1",
+          "description": "Deep thinking, text generation, tool calling",
+          "supports_tools": true,
+          "context_length": 131072,
+          "input_price": 4.0,
+          "output_price": 12.0
+        },
+        {
+          "id": "deepseek-v3-1-terminus",
+          "name": "DeepSeek V3.1 Terminus",
           "description": "Deep thinking, text generation, tool calling",
           "supports_tools": true,
           "context_length": 131072,
@@ -3145,229 +3341,22 @@
           "output_price": 8.0
         },
         {
-          "id": "doubao-1.5-lite-32k",
-          "name": "Doubao 1.5 Lite 32K",
-          "description": "Lite 32K model",
-          "supports_tools": true,
-          "context_length": 32768,
-          "input_price": 0.3,
-          "output_price": 0.6
-        },
-        {
-          "id": "doubao-1.5-pro-32k",
-          "name": "Doubao 1.5 Pro 32K",
-          "description": "Pro 32K model",
-          "supports_tools": true,
-          "context_length": 32768,
-          "input_price": 0.8,
-          "output_price": 2.0
-        },
-        {
-          "id": "doubao-1.5-thinking-pro",
-          "name": "Doubao 1.5 Thinking Pro",
-          "description": "Thinking Pro model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 4.0,
-          "output_price": 16.0
-        },
-        {
-          "id": "doubao-1.5-thinking-vision-pro",
-          "name": "Doubao 1.5 Thinking Vision Pro",
-          "description": "Thinking + vision model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 3.0,
-          "output_price": 9.0
-        },
-        {
-          "id": "doubao-1.5-ui-tars",
-          "name": "Doubao 1.5 UI Tars",
-          "description": "GUI task model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 3.5,
-          "output_price": 12.0
-        },
-        {
-          "id": "doubao-1.5-vision-lite",
-          "name": "Doubao 1.5 Vision Lite",
-          "description": "Vision lite model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 1.5,
-          "output_price": 4.5
-        },
-        {
-          "id": "doubao-1.5-vision-pro",
-          "name": "Doubao 1.5 Vision Pro",
-          "description": "Vision pro model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 3.0,
-          "output_price": 9.0
-        },
-        {
-          "id": "doubao-lite-32k",
-          "name": "Doubao Lite 32K",
-          "description": "Lite 32K model",
-          "supports_tools": true,
-          "context_length": 32768,
-          "input_price": 0.3,
-          "output_price": 0.6
-        },
-        {
-          "id": "doubao-seed-2.0-code",
-          "name": "Doubao Seed 2.0 Code",
-          "description": "Seed 2.0 coding model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 3.2,
-          "output_price": 16.0
-        },
-        {
-          "id": "doubao-seed-2.0-lite",
-          "name": "Doubao Seed 2.0 Lite",
-          "description": "Seed 2.0 lite model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.6,
-          "output_price": 3.6
-        },
-        {
-          "id": "doubao-seed-2.0-mini",
-          "name": "Doubao Seed 2.0 Mini",
-          "description": "Seed 2.0 mini model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.2,
-          "output_price": 2.0
-        },
-        {
-          "id": "doubao-seed-2.0-pro",
-          "name": "Doubao Seed 2.0 Pro",
-          "description": "Seed 2.0 pro model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 3.2,
-          "output_price": 16.0
-        },
-        {
-          "id": "doubao-seed-code",
-          "name": "Doubao Seed Code",
-          "description": "Programming enhanced model",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 1.2,
-          "output_price": 8.0
-        },
-        {
-          "id": "doubao-seed-1.6",
-          "name": "Doubao Seed 1.6",
-          "description": "General model with deep thinking, text generation and tool calling",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.8,
-          "output_price": 2.0
-        },
-        {
-          "id": "doubao-seed-1.6-thinking",
-          "name": "Doubao Seed 1.6 Thinking",
+          "id": "deepseek-r1",
+          "name": "DeepSeek R1",
           "description": "Deep thinking model",
           "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.8,
-          "output_price": 8.0
-        },
-        {
-          "id": "doubao-seed-1-8-251215",
-          "name": "Doubao Seed 1.8",
-          "description": "Most powerful multimodal agent model with enhanced capabilities",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.8,
-          "output_price": 2.0
-        },
-        {
-          "id": "doubao-seed-code-preview-251028",
-          "name": "Doubao Seed Code Preview",
-          "description": "Programming enhanced - deep thinking, text generation, multimodal understanding, tool calling",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 1.2,
-          "output_price": 8.0
-        },
-        {
-          "id": "doubao-seed-1-6-lite-251015",
-          "name": "Doubao Seed 1.6 Lite",
-          "description": "Lightweight model with deep thinking, text generation, multimodal understanding, tool calling",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.3,
-          "output_price": 0.6
-        },
-        {
-          "id": "doubao-seed-1-6-flash-250828",
-          "name": "Doubao Seed 1.6 Flash",
-          "description": "Fast model with deep thinking, text generation, vision grounding, multimodal understanding",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.15,
-          "output_price": 1.5
-        },
-        {
-          "id": "doubao-seed-1-6-vision-250815",
-          "name": "Doubao Seed 1.6 Vision",
-          "description": "Vision model with deep thinking, multimodal understanding, GUI task processing",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 0.8,
-          "output_price": 8.0
-        },
-        {
-          "id": "doubao-seed-translation-250915",
-          "name": "Doubao Seed Translation",
-          "description": "Translation enhanced model",
-          "supports_tools": false,
-          "context_length": 4096,
-          "input_price": 1.2,
-          "output_price": 3.6
-        },
-        {
-          "id": "deepseek-v3-2-251201",
-          "name": "DeepSeek V3.2",
-          "description": "Deep thinking, text generation, tool calling",
-          "supports_tools": true,
           "context_length": 131072,
+          "input_price": 4.0,
+          "output_price": 16.0
+        },
+        {
+          "id": "GLM-4.7",
+          "name": "GLM-4.7",
+          "description": "Zhipu GLM model provided via Ark",
+          "supports_tools": true,
+          "context_length": 200000,
           "input_price": 2.0,
-          "output_price": 3.0
-        },
-        {
-          "id": "deepseek-v3-1-terminus",
-          "name": "DeepSeek V3.1 Terminus",
-          "description": "Deep thinking, text generation, tool calling",
-          "supports_tools": true,
-          "context_length": 131072,
-          "input_price": 4.0,
-          "output_price": 12.0
-        },
-        {
-          "id": "kimi-k2",
-          "name": "Kimi K2",
-          "description": "Kimi K2 model provided via Ark",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 4.0,
-          "output_price": 16.0
-        },
-        {
-          "id": "kimi-k2-thinking-251104",
-          "name": "Kimi K2 Thinking",
-          "description": "Deep thinking, tool calling",
-          "supports_tools": true,
-          "context_length": 262144,
-          "input_price": 4.0,
-          "output_price": 16.0
+          "output_price": 8.0
         },
         {
           "id": "doubao-seedance-1-5-pro-251215",
@@ -3376,7 +3365,8 @@
           "supports_tools": false,
           "context_length": 4096,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "published_at": "2025-12-15"
         },
         {
           "id": "doubao-seedream-4-5-251128",
@@ -3385,7 +3375,8 @@
           "supports_tools": false,
           "context_length": 4096,
           "input_price": 0.0,
-          "output_price": 0.0
+          "output_price": 0.0,
+          "published_at": "2025-11-28"
         }
       ]
     },
